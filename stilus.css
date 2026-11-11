@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+                        "h h"
+                        "n n"
+                        "ar as"
+                        "f f";
+    gap: 10px;
+}
+
+header{
+    grid-area: h;
+    color: rgb(8, 170, 108);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+nav{
+    grid-area: n;
+    background-color: rgb(8, 170, 108);
+}
+
+nav a:hover{
+    color: rgb(4, 134, 84);
+}
+
+a{
+    color: rgb(85, 231, 175);
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+article{
+    grid-area: ar;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    color: rgb(8, 170, 108);
+}
+
+.Benz{
+    border: 1px solid rgb(4, 134, 84);
+    border-radius: 5px;
+}
+
+.Ford{
+    border: 1px solid rgb(4, 134, 84);
+    border-radius: 5px;
+}
+
+img{
+    border: 1px solid rgb(4, 134, 84);
+    padding: 5px;
+    border-radius: 5px;
+}
