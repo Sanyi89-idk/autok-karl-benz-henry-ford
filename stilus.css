@@ -23,6 +23,13 @@ header{
 nav{
     grid-area: n;
     background-color: rgb(8, 170, 108);
+    padding: 15px;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav a:hover{
@@ -37,10 +44,22 @@ a{
 
 article{
     grid-area: ar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+article img{
+    width: calc(100% - 30px);
+    margin: 15px 15px 0 15px;
 }
 
 aside{
     grid-area: as;
+}
+
+aside img{
+    width: calc(100% - 30px);
 }
 
 footer{
@@ -52,15 +71,69 @@ footer{
 .Benz{
     border: 1px solid rgb(4, 134, 84);
     border-radius: 5px;
+    overflow: hidden;
+    margin-left: 30px;    
+    display: flex;
+    flex-direction: column;
+}
+
+.Benz h2{
+    color: rgb(8, 170, 108);
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgb(4, 134, 84);
+    padding: 12px 15px;
+    margin: 0;
+    background-color: #f2f2f2;
 }
 
 .Ford{
     border: 1px solid rgb(4, 134, 84);
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.Ford h2{
+    color: rgb(8, 170, 108);
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgb(4, 134, 84);
+    padding: 12px 15px;
+    margin: 0;
+    background-color: #f2f2f2;
+    
+}
+
+.also{
+    border-top: 1px solid rgb(4, 134, 84);
+    height: 35px;
+    background-color: #f2f2f2;
+    margin-top: auto;
 }
 
 img{
     border: 1px solid rgb(4, 134, 84);
     padding: 5px;
     border-radius: 5px;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "h"
+                            "n"
+                            "ar"
+                            "as"
+                            "f";
+    gap: 10px;
+    }
+    
 }
